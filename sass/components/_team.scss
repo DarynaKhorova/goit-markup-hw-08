@@ -1,0 +1,48 @@
+.team-section {
+  background: $background-second;
+}
+.team-list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    margin: -15px;
+    text-align: center;
+  }
+}
+
+.team-list .item {
+  width: 450px;
+  margin: 15px;
+  background-color: $title-text-color-second;
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}
+.team-list .foto {
+  margin-bottom: 30px;
+}
+.team-list .title {
+  margin-top: 0px;
+  margin-bottom: 10px;
+  color: $title-text-color;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+}
+.team-list .text {
+  margin-top: 0;
+  margin-bottom: 16;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+}
