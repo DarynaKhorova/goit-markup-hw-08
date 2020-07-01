@@ -19,9 +19,10 @@
   display: none;
 }
 .menu-container {
-  background-color: $title-text-color-second;
-  padding: 60px, 140px;
+  display: flex;
+  align-items: center;
   text-align: center;
+  background-color: $title-text-color-second;
   font-size: 20px;
   &.is-open {
     display: block;
@@ -38,20 +39,114 @@
     .site-nav {
       display: flex;
     }
-    .address {
-      display: flex;
-    }
   }
 }
-/*@media screen and (min-width: 768px) {
-  .item + .item {
+
+.site-nav .link {
+  position: relative;
+  display: block;
+  padding-bottom: 40px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $title-text-color;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+
+  @media screen and (min-width: 768px) {
+    display: block;
+    font-size: 14px;
+    line-height: 1.14;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+.site-nav .link::after {
+  content: " ";
+  position: absolute;
+  display: block;
+  left: 25%;
+  width: 50%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $accent-color;
+  opacity: 0;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.site-nav .link:hover::after,
+.site-nav .link:focus::after {
+  opacity: 1;
+}
+.site-nav .studio-link {
+  color: $accent-color;
+  opacity: 1;
+}
+.site-nav .studio-link::after {
+  content: " ";
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $accent-color;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+.site-nav .studio-link:hover::after,
+.site-nav .studio-link:focus::after {
+  opacity: 1;
+}
+.site-nav .portfolio-link {
+  color: $accent-color;
+  opacity: 1;
+}
+.site-nav .portfolio-link::after {
+  content: " ";
+  position: absolute;
+  left: 25%;
+  width: 50%;
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background-color: $accent-color;
+  opacity: 1;
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  @media screen and (min-width: 768px) {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+}
+
+.site-nav .portfolio-link:hover::after,
+.site-nav .portfolio-link:focus::after {
+  opacity: 1;
+}
+@media screen and (min-width: 768px) {
+  .site-nav .item + .item {
     margin-left: 50px;
   }
 }
-.link {
+/*.site-nav .link {
   display: block;
   position: relative;
-  color: $title-text-color;
+  color: var(--title-text-color);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
@@ -60,13 +155,12 @@
   padding-bottom: 32px;
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
 .site-nav .link:hover,
 .site-nav .link:focus {
-  color: $accent-color;
+  color: var(--accent-color);
 }
 .site-nav .link::after {
-  content: " ";
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -74,7 +168,7 @@
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: $accent-color;
+  background-color: var(--accent-color);
   opacity: 0;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -83,7 +177,7 @@
   opacity: 1;
 }
 .site-nav .studio-link::after {
-  content: " ";
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -91,7 +185,7 @@
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: $accent-color;
+  background-color: var(--accent-color);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -100,7 +194,7 @@
   opacity: 1;
 }
 .site-nav .portfolio-link::after {
-  content: " ";
+  content: "";
   position: absolute;
   left: 0;
   bottom: 0;
@@ -108,12 +202,11 @@
   width: 100%;
   height: 4px;
   border-radius: 2px;
-  background-color: $accent-color;
+  background-color: var(--accent-color);
   opacity: 1;
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .site-nav .portfolio-link:hover::after,
 .site-nav .portfolio-link:focus::after {
   opacity: 1;
-}
-*/
+}*/

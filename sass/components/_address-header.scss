@@ -1,0 +1,44 @@
+@media screen and (min-width: 768px) {
+  .address {
+    display: flex;
+    margin-left: auto;
+  }
+}
+.address .link {
+  display: block;
+  padding-bottom: 16px;
+  align-items: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.17;
+  letter-spacing: 0.02em;
+  color: $primary-text-color;
+  @media screen and (min-width: 768px) {
+    font-size: 14px;
+    line-height: 1.14;
+  }
+}
+.address .link-icon {
+  width: 16px;
+  height: 11px;
+  fill: $primary-text-color;
+  transition: $timing-function;
+  &:hover,
+  &:focus {
+    fill: $accent-color;
+  }
+}
+/*
+.address .link {
+    transition: $timing-function;
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+  
+}
+&:not(:last-child) {
+    margin-right: 50px;
+  }
+
+*/
