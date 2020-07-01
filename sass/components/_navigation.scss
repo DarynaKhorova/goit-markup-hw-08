@@ -1,14 +1,11 @@
-/*.site-nav {
-  display: flex;
-} 
-  .item + .item {
-    margin-left: 50px;
-  }*/
 .menu-button {
   display: inline-flex;
   margin: 0;
   padding: 0;
   border: none;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
 }
 .menu-button .icon-cross {
   display: none;
@@ -22,20 +19,35 @@
   display: none;
 }
 .menu-container {
-  position: absolute;
-  display: none;
-  top: 100%;
-  left: 0;
-  width: 100%;
   background-color: $title-text-color-second;
   padding: 60px, 140px;
   text-align: center;
   font-size: 20px;
+  &.is-open {
+    display: block;
+  }
+  @media screen and (max-width: 767px) {
+    position: absolute;
+    display: none;
+    top: 100%;
+    left: 0;
+    width: 100%;
+  }
+  @media screen and (min-width: 768px) {
+    display: flex;
+    .site-nav {
+      display: flex;
+    }
+    .address {
+      display: flex;
+    }
+  }
 }
-.menu-container.is-open {
-  display: block;
+/*@media screen and (min-width: 768px) {
+  .item + .item {
+    margin-left: 50px;
+  }
 }
-
 .link {
   display: block;
   position: relative;
@@ -104,3 +116,4 @@
 .site-nav .portfolio-link:focus::after {
   opacity: 1;
 }
+*/
