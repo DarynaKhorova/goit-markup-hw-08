@@ -1,19 +1,19 @@
 .team-section {
   background: $background-second;
 }
+
 .team-list {
+  text-align: center;
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
-    text-align: center;
   }
+
   @media screen and (min-width: 1200px) {
     flex-wrap: nowrap;
     margin: -15px;
-    text-align: center;
   }
 }
-
 .team-list .item {
   width: 450px;
   margin: 15px;
@@ -28,9 +28,34 @@
     width: 270px;
   }
 }
-.team-list .foto {
-  margin-bottom: 30px;
+.team-list .item:not(:last-child) {
+  @media (max-width: 767px) {
+    margin-bottom: 30px;
+  }
 }
+.team-list .thumb {
+  height: 320px;
+  outline: 1px solid red;
+  @media (min-width: 768px) {
+    height: 260px;
+  }
+}
+
+.team-list img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top;
+}
+
+.team-list > .item {
+  @media screen and(min-width:768px) {
+    width: calc((100% - 4 * 15px) / 2);
+    margin: 15px;
+  }
+}
+
 .team-list .title {
   margin-top: 0px;
   margin-bottom: 10px;

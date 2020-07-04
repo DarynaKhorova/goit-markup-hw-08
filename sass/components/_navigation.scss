@@ -34,14 +34,22 @@
     left: 0;
     width: 100%;
   }
-  @media screen and (min-width: 768px) {
+  /*@media screen and (min-width: 768px) {
     display: flex;
     .site-nav {
       display: flex;
+      margin-right: 84px;
     }
+  }*/
+}
+.site-nav {
+  @media screen and (min-width: 768px) {
+    display: flex;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 305px;
   }
 }
-
 .site-nav .link {
   position: relative;
   display: block;
@@ -141,6 +149,9 @@
 @media screen and (min-width: 768px) {
   .site-nav .item + .item {
     margin-left: 50px;
+  }
+  .site-nav .item:last-child {
+    margin-right: px;
   }
 }
 /*.site-nav .link {

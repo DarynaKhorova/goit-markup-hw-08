@@ -1,18 +1,30 @@
-@media screen and (min-width: 768px) {
+/*@media screen and (min-width: 768px) {
   .address {
     display: flex;
-    margin-left: auto;
+  }
+}*/
+
+.address {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: column;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-direction: row;
   }
 }
+
 .address .link {
   display: block;
-  padding-bottom: 16px;
   align-items: center;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: $primary-text-color;
+  @media screen and (max-width: 767px) {
+    padding-bottom: 16px;
+  }
   @media screen and (min-width: 768px) {
     font-size: 14px;
     line-height: 1.14;
