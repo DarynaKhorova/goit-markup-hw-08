@@ -47,7 +47,6 @@
     display: flex;
   }
   @media screen and (min-width: 1200px) {
-    margin-right: 305px;
   }
 }
 .site-nav .link {
@@ -146,14 +145,13 @@
 .site-nav .portfolio-link:focus::after {
   opacity: 1;
 }
-@media screen and (min-width: 768px) {
-  .site-nav .item + .item {
+
+.site-nav .item + .item {
+  @media screen and (min-width: 768px) {
     margin-left: 50px;
   }
-  .site-nav .item:last-child {
-    margin-right: px;
-  }
 }
+
 /*.site-nav .link {
   display: block;
   position: relative;
