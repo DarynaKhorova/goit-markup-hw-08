@@ -1,12 +1,18 @@
-.footer-contacts .logo {
-  text-align: center;
-}
-.footer-contacts.part-footer {
-  color: $title-text-color-second;
-}
 .footer-contacts {
   margin-bottom: 60px;
+  @media screen and(min-width:1200px) {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
+.footer-contacts .logo {
+  margin: 0;
+}
+.footer-contacts .part-footer {
+  color: $title-text-color-second;
+}
+
 .footer-address .location {
   display: block;
   margin-bottom: 8px;

@@ -1,10 +1,14 @@
-footer {
+.footer-container {
   background: $footer-color;
-  padding-top: 56px;
+  padding-top: 60px;
   text-align: center;
+  @media screen and(min-width:1200px) {
+    display: flex;
+    justify-content: space-between;
+  }
 } /*
 .footer-container {
   display: flex;
   align-items: flex-start;
-  justify-content: space-between;
+  
 }*/
